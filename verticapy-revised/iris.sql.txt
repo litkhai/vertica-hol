@@ -1,0 +1,12 @@
+CREATE TABLE public.iris
+(
+    id numeric(3), -- 순번 
+    Sepal_Length float,  --꽃받침길이
+    Sepal_Width float,   --꽃받침너비
+    Petal_Length float,  --꽃잎길이
+    Petal_Width float,   --꽃잎너비
+    Species varchar(10)  --붗꽃종류(3종류)
+)SEGMENTED BY hash(iris.id, iris.Sepal_Length, iris.Sepal_Width, iris.Petal_Length, iris.Petal_Width, iris.Species) ALL NODES;
+
+COPY iris FROM '/data/ml/indb/iris.csv'  DELIMITER ',';
+

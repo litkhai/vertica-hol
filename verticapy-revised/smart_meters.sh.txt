@@ -1,0 +1,8 @@
+vsql -Udbadmin -wvertica_4U -c "create table sm_consumption (meterID int, dateUTC timestamp, value numeric(10,6));"
+vsql -Udbadmin -wvertica_4U -c "copy sm_consumption FROM LOCAL '/data/ml/verticapy/sm_consumption.csv' DELIMITER ',' SKIP 1 ENCLOSED BY '\"';"
+
+vsql -Udbadmin -wvertica_4U -c "create table sm_weather (dateUTC timestamp, temperature numeric(10,6), humidity numeric(11,6));"
+vsql -Udbadmin -wvertica_4U -c "copy sm_weather FROM LOCAL '/data/ml/verticapy/sm_weather.csv' DELIMITER ',' SKIP 1 ENCLOSED BY '\"';"
+
+vsql -Udbadmin -wvertica_4U -c "create table sm_meters (meterID int, residenceType int, latitude float, longitude float);"
+vsql -Udbadmin -wvertica_4U -c "copy sm_meters FROM LOCAL '/data/ml/verticapy/sm_meters.csv' DELIMITER ',' SKIP 1 ENCLOSED BY '\"';"

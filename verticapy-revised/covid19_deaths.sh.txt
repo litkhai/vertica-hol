@@ -1,0 +1,2 @@
+vsql -Udbadmin -wvertica_4U -c "create table covid19_deaths (date date, county varchar(66), state varchar(48), fips int, cases int, deaths int);"
+vsql -Udbadmin -wvertica_4U -c "copy covid19_deaths FROM LOCAL '/data/ml/verticapy/covid19_deaths.csv' DELIMITER ',' SKIP 1 ENCLOSED BY '\"';"
