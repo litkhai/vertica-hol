@@ -1,0 +1,5 @@
+ Predicting_date | rained_predict_by_dow_pattern | rained_predict_by_week_pattern | mean_of_predictions_of_raining | amount_predict_by_dow_pattern | amount_predict_by_week_pattern | mean_of_predictions_of_amount 
+-----------------+-------------------------------+--------------------------------+--------------------------------+-------------------------------+--------------------------------+-------------------------------
+ 2018-02-17      |             0.263775971096344 |               0.44715549938519 |              0.355465735240767 |              3.50677506778084 |               3.57097345140444 |              3.53887425959264
+(1 row)
+
